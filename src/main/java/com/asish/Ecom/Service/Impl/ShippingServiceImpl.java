@@ -50,7 +50,7 @@ public class ShippingServiceImpl implements ShippingService {
         double charge = ShippingChargeCalculator.calculate(distance, 1.0, transportMode, deliverySpeed);
 
         return ShippingChargeResponse.builder()
-                .shippingCharge(charge)
+                .shippingCharge(Math.round(charge * 100.0) / 100.0)
                 .build();
     }
 
@@ -90,7 +90,7 @@ public class ShippingServiceImpl implements ShippingService {
                 .build();
 
         return ShippingCalculateResponse.builder()
-                .shippingCharge(charge)
+                .shippingCharge(Math.round(charge * 100.0) / 100.0)
                 .nearestWarehouse(warehouseResponse)
                 .build();
     }
