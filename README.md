@@ -30,7 +30,7 @@ customer based on distance, weight, and delivery speed.
 
 ### Setup
 1. Create a PostgreSQL database
-2. Update `src/main/resources/application.properties`:
+2. Update `src/main/resources/application.yaml`:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
 spring.datasource.username=your_username
